@@ -1,10 +1,6 @@
 pipeline:
-  build:
-    image: golang
-    commands:
-      - go get
-      - go build
-      - go test
   publish:
     image: plugins/docker
-    repo: foo/bar
+    username: youruser
+    password: yourpasswd
+    repo: youruser/bar
