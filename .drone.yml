@@ -1,6 +1,17 @@
 pipeline:
   publish:
     image: plugins/docker
-    username: youruser
-    password: yourpasswd
-    repo: youruser/bar
+    dockerfile: Dockerfile
+    username: $USER
+    password: $PASSWD
+    email: zowu@cisco.com
+    repo: iceworld/bar
+    tags: latest
+  deploy:
+    image: quay.io/honestbee/drone-kubernetes
+    kubernetes_server: http://10.10.20.1:8001
+    kubernetes_token: 6323d4.d85d129e07132217
+    namespace: default
+    deployment: demo-app-prod
+    repo: iceworld/bar
+    tag: latest
