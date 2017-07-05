@@ -11,4 +11,4 @@ spec:
     spec:
       containers:
       - name: hello
-        image: iceworld/bar
+        image: devnetcicd/bar
