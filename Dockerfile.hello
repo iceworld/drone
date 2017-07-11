@@ -1,5 +1,5 @@
 FROM scratch
 ENV PORT 80
 EXPOSE $PORT
-COPY main /bin/
-ENTRYPOINT ["/bin/main"]
+COPY main /
+ENTRYPOINT ["/main"]
